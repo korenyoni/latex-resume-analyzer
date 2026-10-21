@@ -1,0 +1,8 @@
+# Never bake into the image:
+.env*
+.venv
+.git
+uploads
+__pycache__
+*.pyc
+.DS_Store

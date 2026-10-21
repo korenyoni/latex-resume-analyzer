@@ -1,0 +1,25 @@
+# Resume Analyzer configuration
+
+llm:
+  # Any OpenAI-compatible endpoint (default: OpenRouter). Override via env.
+  base_url: "${OPENAI_COMPATIBLE_BASE_URL:-https://openrouter.ai/api/v1/}"
+  # Model served by the endpoint
+  model: "moonshotai/kimi-k3"
+  # Vision model (page images): visual inspection + reading order.
+  # Not used yet; see design-spec.md §1.2 / §2.3.
+  vision_model: "minimax/minimax-m3:thinking"
+  # Token is read from the environment; never commit real tokens.
+  # Copy .env.example to .env and set OPENAI_COMPATIBLE_API_KEY.
+  api_key: "${OPENAI_COMPATIBLE_API_KEY:-}"
+  temperature: 0.2
+
+agent:
+  # Skills source path, relative to the agent's filesystem root (project root).
+  # Drop new skill directories (e.g. score-format/, score-sections/) under
+  # .agents/skills/ and they are picked up automatically.
+  skills_path: "/.agents/skills/"
+  system_prompt: |
+    You are a resume analysis assistant.
+    Use the extract-pdf skill to read PDF resumes before analyzing them.
+    Be concrete: cite sections, quote exact lines, and give actionable
+    suggestions for improvement.

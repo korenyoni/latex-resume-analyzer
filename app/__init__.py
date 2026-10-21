@@ -1,0 +1,1 @@
+"""Resume analyzer application package."""
