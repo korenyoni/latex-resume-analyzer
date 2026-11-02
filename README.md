@@ -88,11 +88,11 @@ app/
   config.py            Settings: config.yaml + env-var expansion
   agent.py             deepagents agent + ChatOpenAI + FilesystemBackend
   tools.py             skill-gated tools (extract_pdf)
-  main.py              CLI entrypoint (--check, analyze a PDF)
+  main.py              CLI entrypoint (--check, analyze a resume)
   web.py               FastAPI web app (uploads, analysis jobs)
   static/index.html    single-page UI (vanilla JS)
 config/config.yaml     non-secret configuration
-tests/fixtures/        sample PDFs (example-resume.pdf)
+tests/fixtures/        sample PDF source files (main.tex)
 uploads/               PDFs + analysis artifacts (gitignored / Docker volume)
 docker-compose.yml     app service
 Dockerfile             app image
@@ -105,6 +105,6 @@ See [`design-spec.md`](design-spec.md).
 ## Credits
 
 * Refer to: requirements.txt
-* [LetX](https://letx.app/): template resume: [main.tex](tests/fixtures/main.tex)
+* [LetX](https://letx.app/): thank you for making the [template resume](tests/fixtures/main.tex) publicly available.
 * [pdf.js](https://github.com/mozilla/pdf.js)
 * [Prism](https://github.com/PrismLibrary/Prism)
