@@ -1,6 +1,9 @@
 # resume-analyzer
 
-Analyze resume PDFs with a [deepagents](https://github.com/langchain-ai/deepagents)
+> [!NOTE]  
+> This repository is a work in progress. Screen recordings and additional bug fixes are planned.
+
+Builds and analyzes LaTeX resumes with a [deepagents](https://github.com/langchain-ai/deepagents)
 agent running against any OpenAI-compatible LLM endpoint.
 
 ## Setup
@@ -98,3 +101,8 @@ Dockerfile             app image
 ## Roadmap
 
 See [`design-spec.md`](design-spec.md).
+
+## Credits
+
+* Refer to: requirements.txt
+* [LetX](https://letx.app/): template resume: [main.tex](tests/fixtures/main.tex)
