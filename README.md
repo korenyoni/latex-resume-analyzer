@@ -106,3 +106,5 @@ See [`design-spec.md`](design-spec.md).
 
 * Refer to: requirements.txt
 * [LetX](https://letx.app/): template resume: [main.tex](tests/fixtures/main.tex)
+* [pdf.js](https://github.com/mozilla/pdf.js)
+* [Prism](https://github.com/PrismLibrary/Prism)
